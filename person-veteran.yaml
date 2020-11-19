@@ -23,12 +23,14 @@ military service:
     tour: 
       period: jan 1 2016 - jan 1 2018
       branch: army
+      location: Camp Army
       wartime: no
       active duty: yes
       officer: no
     tour: 
       period jan 1 2014 - jan 1 2016
       branch: navy
+      location: USS Navy
       wartime: no
       active duty: yes
       officer: no
