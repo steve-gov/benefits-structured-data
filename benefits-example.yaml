@@ -1,5 +1,46 @@
 ---
-# A benefit map
+# A benefit map, major WIP
+
+loan guaranty: 
+  name: VA-backed Veterans home loans
+  short description: "Assistance for Veterans, service members, and their survivors to buy, build, improve, or refinance a home."
+  long description: "VA direct and VA-backed Veterans home loans can help Veterans, service members, and their survivors to buy, build, improve, or refinance a home."
+  URL: https://www.va.gov/housing-assistance/home-loans/
+  entitlement:
+    USC: 38 U.S. Code § 3702
+    CFR: 38 CFR Part 36
+  eligibilty:
+    servicemember:
+      military service:
+        - active duty
+        - at least 90 continuous days
+    veteran:
+      military service:
+        # there are 9 major business rules to break down, see https://www.va.gov/housing-assistance/home-loans/eligibility/
+    
+  enrollment:
+    form: 10-10068
+    system: # how do we check if someone is enrolled in this benefit?
+
+clfmp: 
+  name: Camp Lejeune Family Member Program (CLFMP) 
+  short description: "A medical care cost reimbursement program for family members of Veterans who were stationed at Camp Lejeune"
+  long description: "The Camp Lejeune Family Member Program (CLFMP)is a medical care cost reimbursement program for family members of Veterans who were stationed at Camp Lejeune between August 1, 1953 through December 31, 1987. VA will reimbursement eligible Camp Lejeune Family Members for health care costs related to one or more of 15 specified illnesses or medical conditions. For more information visit https://www.clfamilymembers.fsc.va.gov or call the toll-free CLFMP customer service line at 1-866-372-1144."
+  URL: https://www.clfamilymembers.fsc.va.gov
+  entitlement:
+    USC: 38 U.S. Code § 1787
+    CFR: 38 CFR § 17.410
+  eligibilty:
+    spouse:
+      # antecedent Veteran was on active duty and served at Camp Lejeune for 30 days or more between August 1, 1953 and December 31, 1987
+      # lived at Camp Lejune from August 1, 1953 through December 31, 1987
+    child: 
+      # antecedent Veteran was on active duty and served at Camp Lejeune for 30 days or more between August 1, 1953 and December 31, 1987
+      # lived or was in utero at Camp Lejune from August 1, 1953 through December 31, 1987
+  enrollment:
+    form: 10-10068
+    system: # how do we check if someone is enrolled in this benefit?
+    
 pension: 
   name: Veteran Pension
   short description: "Provides direct financial assistance to Veterans and Survivors"
@@ -9,42 +50,42 @@ pension:
     USC: 38 U.S. Code § 1513 
     CFR: 38 CFR § 3.3
   eligibility:
-    requirements: 
-      veteran:
-        discharge: not dishonorable
-        household income: less than $129,094
+    veteran:
+      discharge: not dishonorable
+      household income: less than $129,094
+      must be one of: 
+        age: over 65
+        disability: permanent and total
         must be one of: 
-          age: over 65
-          disability: permanent and total
-          must be one of: 
-           - flash: nursing home due to disabiility
-           - flash: receiving SSDI
-           - flash: receiving SSI
-        military service:
-          #need help breaking these down, see https://www.va.gov/pension/eligibility/
-          must be one of:
-            started service before sep 8 1980
-              - >= 90 days active duty
-              - 1 day during wartime period
-            started service after sep 7 1980
-              - 24 months OR full period of ordered service
-              - 1 day during wartime period
-            started service after oct 16 1981
-              - no active duty service for 24 months before qualifying service period
-      dependent: 
-        spouse: 
-          household income: less than $129,094
-          # never remarried
-          # antecendent Veteran deceased
-          # antecedent Veteran meets discharge requirements
-          # antecedent Veteran meets military service requirements
-        child:
-          married: false
-          # antecendent Veteran deceased 
-          must be one of:
-            - age less than 18
-            - age less than 23 AND attending a VA-approved school
-            # - unable to care for yourself due to a disability that happened before age 18
+         - flash: nursing home due to disabiility
+         - flash: receiving SSDI
+         - flash: receiving SSI
+      military service:
+        # business rules to break down, see https://www.va.gov/pension/eligibility/
+        must be one of:
+          started service before sep 8 1980
+            - >= 90 days active duty
+            - 1 day during wartime period
+          started service after sep 7 1980
+            - 24 months OR full period of ordered service
+            - 1 day during wartime period
+          started service after oct 16 1981
+            - no active duty service for 24 months before qualifying service period
+    dependent: 
+      spouse: 
+        household income: less than $129,094
+        # never remarried
+        # antecendent Veteran deceased
+        # antecedent Veteran meets discharge requirements
+        # antecedent Veteran meets military service requirements
+      child:
+        married: false
+        # antecendent Veteran deceased 
+        must be one of:
+          - age less than 18
+          - age less than 23 AND attending a VA-approved school
+          # - unable to care for yourself due to a disability that happened before age 18
   enrollment: 
     form: 21P-527EZ
-    # WIP after this
+    system: # how do we check if someone is enrolled in this benefit?
+    
