@@ -39,3 +39,13 @@ financial information:
   household income: $80,000
     last updated: apr 15 2019
     
+disabilities:
+  rating: 80%
+    permanent and total: false
+  right knee:
+    rating: 50%
+    date: feb 1 2017
+  ptsd: 
+    rating: 70%
+    date: feb 1 2017
+    
