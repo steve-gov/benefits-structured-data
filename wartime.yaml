@@ -1,0 +1,29 @@
+---
+# wartime periods
+Mexican Border period 
+  start: May 9, 1916 
+  end: April 5, 1917
+  requirements:
+    - for Veterans who served in Mexico, on its borders, or in adjacent waters
+World War I 
+  start: April 6, 1917
+  end: November 11, 1918
+World War II
+  start: December 7, 1941
+  end: December 31, 1946
+Korean conflict 
+  start: June 27, 1950
+  end: January 31, 1955
+Vietnam War era (internal)
+  start: February 28, 1961
+  end: May 7, 1975
+  requirements: 
+    - for Veterans who served in the Republic of Vietnam
+Vietnam War era (external)  
+  start: August 5, 1964
+  end: May 7, 1975
+  requirements:
+    - for Veterans who served outside the Republic of Vietnam
+Gulf War
+  start: August 2, 1990
+  end: present #through a future date to be set by law or presidential proclamation
