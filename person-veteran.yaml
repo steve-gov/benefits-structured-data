@@ -1,0 +1,38 @@
+---
+# example of a Veteran
+first: george
+middle: jefferson
+last: smith
+dob: jan 1 1999
+gender: M
+self identified gender: M
+
+EDIPI: 111111111111
+ICN: 1111111111111
+SSN: 111
+
+location:
+  state: CA
+  county: yolo
+  country: USA
+military service:
+  status: veteran
+    date of transition: jan 2 2018
+    character of discharge: honorable
+  tours:
+    tour: 
+      period: jan 1 2016 - jan 1 2018
+      branch: army
+      wartime: no
+      active duty: yes
+    tour: 
+      period jan 1 2014 - jan 1 2016
+      branch: navy
+      wartime: no
+      active duty: yes
+
+dependents:
+  spouse:
+    EDIPI: 22222222222222
+    
+  
