@@ -17,7 +17,6 @@ loan guaranty:
     veteran:
       military service:
         # there are 9 major business rules to break down, see https://www.va.gov/housing-assistance/home-loans/eligibility/
-    
   enrollment:
     form: 10-10068
     system: # how do we check if someone is enrolled in this benefit?
