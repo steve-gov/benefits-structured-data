@@ -1,0 +1,50 @@
+---
+# A benefit map
+pension: 
+  name: Veteran Pension
+  short description: "Provides direct financial assistance to Veterans and Survivors"
+  long description: "VA helps Veterans and their families cope with financial challenges by providing supplemental income through the Veterans Pension and Survivors Pension benefit programs. Payments are made to bring the Veteran's or Survivor's total income, including other retirement or Social Security income, to a level set by Congress. Unreimbursed medical expenses may reduce countable income for VA purposes."
+  URL: https://www.benefits.va.gov/pension/
+  entitlement: 
+    USC: 38 U.S. Code § 1513 
+    CFR: 38 CFR § 3.3
+  eligibility:
+    requirements: 
+      veteran:
+        discharge: not dishonorable
+        household income: less than $129,094
+        must be one of: 
+          age: over 65
+          disability: permanent and total
+          must be one of: 
+           - flash: nursing home due to disabiility
+           - flash: receiving SSDI
+           - flash: receiving SSI
+        military service:
+          #need help breaking these down, see https://www.va.gov/pension/eligibility/
+          must be one of:
+            started service before sep 8 1980
+              - >= 90 days active duty
+              - 1 day during wartime period
+            started service after sep 7 1980
+              - 24 months OR full period of ordered service
+              - 1 day during wartime period
+            started service after oct 16 1981
+              - no active duty service for 24 months before qualifying service period
+      dependent: 
+        spouse: 
+          household income: less than $129,094
+          # never remarried
+          # antecendent Veteran deceased
+          # antecedent Veteran meets discharge requirements
+          # antecedent Veteran meets military service requirements
+        child:
+          married: false
+          # antecendent Veteran deceased 
+          must be one of:
+            - age less than 18
+            - age less than 23 AND attending a VA-approved school
+            # - unable to care for yourself due to a disability that happened before age 18
+  enrollment: 
+    form: 21P-527EZ
+    # WIP after this
