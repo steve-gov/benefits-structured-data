@@ -25,11 +25,13 @@ military service:
       branch: army
       wartime: no
       active duty: yes
+      officer: no
     tour: 
       period jan 1 2014 - jan 1 2016
       branch: navy
       wartime: no
       active duty: yes
+      officer: no
 
 dependents:
   spouse:
